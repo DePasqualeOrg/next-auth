@@ -3,6 +3,7 @@ import { SessionStore } from "./utils/cookie.js"
 import { init } from "./init.js"
 import renderPage from "./pages/index.js"
 import * as actions from "./actions/index.js"
+import * as mobileActions from "./actions/mobile/index.js"
 import { validateCSRF } from "./actions/callback/oauth/csrf-token.js"
 
 import type { RequestInternal, ResponseInternal } from "../types.js"
@@ -64,6 +65,14 @@ export async function AuthInternal(
           sessionStore,
           cookies
         )
+      case "mobile-signin":
+        return await mobileActions.mobileSignIn(request, options)
+      case "mobile-session":
+        return await mobileActions.mobileSession(request, options)
+      case "mobile-signout":
+        return await mobileActions.mobileSignOut(request, options)
+      case "mobile-callback":
+        return await mobileActions.mobileCallback(request, options)
       default:
     }
   } else {
@@ -90,6 +99,16 @@ export async function AuthInternal(
       case "signout":
         validateCSRF(action, csrfTokenVerified)
         return await actions.signOut(cookies, sessionStore, options)
+
+      // Mobile endpoints - no CSRF validation needed for token-based auth
+      case "mobile-signin":
+        return await mobileActions.mobileSignIn(request, options)
+      case "mobile-session":
+        return await mobileActions.mobileSession(request, options)
+      case "mobile-signout":
+        return await mobileActions.mobileSignOut(request, options)
+      case "mobile-callback":
+        return await mobileActions.mobileCallback(request, options)
       default:
     }
   }

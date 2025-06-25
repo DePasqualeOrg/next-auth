@@ -329,6 +329,10 @@ export type AuthAction =
   | "signout"
   | "verify-request"
   | "webauthn-options"
+  | "mobile-signin"
+  | "mobile-session"
+  | "mobile-signout"
+  | "mobile-callback"
 
 /** @internal */
 export interface RequestInternal {

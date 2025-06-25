@@ -10,6 +10,10 @@ const actions: AuthAction[] = [
   "verify-request",
   "error",
   "webauthn-options",
+  "mobile-signin",
+  "mobile-session",
+  "mobile-signout",
+  "mobile-callback",
 ]
 
 export function isAuthAction(action: string): action is AuthAction {

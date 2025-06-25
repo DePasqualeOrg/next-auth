@@ -72,12 +72,28 @@ export async function makeAuthRequest(params: {
   query?: Record<string, string>
   body?: any
   config?: Partial<AuthConfig>
+  headers?: Record<string, string>
 }) {
-  const { action, body, cookies = {}, host = "authjs.test" } = params
+  const {
+    action,
+    body,
+    cookies = {},
+    host = "authjs.test",
+    headers: customHeaders = {},
+  } = params
   const config = testConfig(params.config)
   const headers = new Headers({ host: host })
   for (const [name, value] of Object.entries(cookies))
     headers.append("cookie", `${name}=${value}`)
+
+  // Add custom headers
+  for (const [name, value] of Object.entries(customHeaders))
+    headers.set(name, value)
+
+  // Set Content-Type for JSON bodies
+  if (body && typeof body === "string") {
+    headers.set("content-type", "application/json")
+  }
 
   let url: string | URL = createActionURL(action, "https", headers, {}, config)
   if (params.path) url = `${url}${params.path}`

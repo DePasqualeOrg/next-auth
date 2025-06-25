@@ -115,6 +115,7 @@ export async function Auth(
   } else if (warningsOrError) {
     // If there's an error in the user config, bail out early
     logger.error(warningsOrError)
+
     const htmlPages = new Set<AuthAction>([
       "signin",
       "signout",

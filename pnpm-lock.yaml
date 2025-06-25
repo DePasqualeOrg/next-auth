@@ -347,8 +347,8 @@ importers:
         specifier: ^2.12.2
         version: 2.14.2
       better-sqlite3:
-        specifier: ^9.6.0
-        version: 9.6.0
+        specifier: ^12.1.0
+        version: 12.1.0
 
   packages/adapter-dgraph:
     dependencies:
@@ -377,7 +377,7 @@ importers:
         version: 0.23.0
       drizzle-orm:
         specifier: ^0.32.0
-        version: 0.32.1(@cloudflare/workers-types@4.20240117.0)(@libsql/client@0.6.0)(@neondatabase/serverless@0.10.4)(@opentelemetry/api@1.7.0)(@prisma/client@6.0.0)(@types/better-sqlite3@7.6.9)(@types/pg@8.11.6)(@types/react@18.2.78)(@xata.io/client@0.28.0(typescript@5.3.3))(better-sqlite3@9.6.0)(knex@2.5.1(better-sqlite3@9.6.0)(mysql2@3.9.7)(pg@8.11.3)(sqlite3@5.1.6))(kysely@0.27.5)(mysql2@3.9.7)(pg@8.11.3)(postgres@3.4.3)(react@18.3.1)(sqlite3@5.1.6)
+        version: 0.32.1(@cloudflare/workers-types@4.20240117.0)(@libsql/client@0.6.0)(@neondatabase/serverless@0.10.4)(@opentelemetry/api@1.7.0)(@prisma/client@6.0.0)(@types/better-sqlite3@7.6.9)(@types/pg@8.11.6)(@types/react@18.2.78)(@xata.io/client@0.28.0(typescript@5.3.3))(better-sqlite3@12.1.0)(knex@2.5.1(better-sqlite3@12.1.0)(mysql2@3.9.7)(pg@8.11.3)(sqlite3@5.1.6))(kysely@0.27.5)(mysql2@3.9.7)(pg@8.11.3)(postgres@3.4.3)(react@18.3.1)(sqlite3@5.1.6)
       libsql:
         specifier: ^0.3.18
         version: 0.3.18
@@ -486,7 +486,7 @@ importers:
         version: 5.9.7(@mikro-orm/sqlite@5.9.7)
       '@mikro-orm/sqlite':
         specifier: ^5
-        version: 5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@9.6.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)
+        version: 5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@12.1.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)
 
   packages/adapter-mongodb:
     dependencies:
@@ -6554,8 +6554,9 @@ packages:
     peerDependencies:
       react: '>=16.8'
 
-  better-sqlite3@9.6.0:
-    resolution: {integrity: sha512-yR5HATnqeYNVnkaUTf4bOP2dJSnyhP4puJN/QPRyx4YkBEEUxib422n2XzPqDEHjQQqazoYoADdAm5vE15+dAQ==}
+  better-sqlite3@12.1.0:
+    resolution: {integrity: sha512-8f5xvlc6bcGZ57kYzQmeWYHqbKj57RRK/WiTrBGUowiX8ZbrgStWznBPIMGJi5MP7SNhJCKSc4TBaX9hhQL6Iw==}
+    engines: {node: 20.x || 22.x || 23.x || 24.x}
 
   big-integer@1.6.52:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
@@ -17587,16 +17588,16 @@ snapshots:
       mikro-orm: 5.9.7
       reflect-metadata: 0.1.13
     optionalDependencies:
-      '@mikro-orm/sqlite': 5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@9.6.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)
+      '@mikro-orm/sqlite': 5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@12.1.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)
 
-  '@mikro-orm/knex@5.9.7(@mikro-orm/core@5.9.7(@mikro-orm/sqlite@5.9.7))(better-sqlite3@9.6.0)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))':
+  '@mikro-orm/knex@5.9.7(@mikro-orm/core@5.9.7(@mikro-orm/sqlite@5.9.7))(better-sqlite3@12.1.0)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))':
     dependencies:
       '@mikro-orm/core': 5.9.7(@mikro-orm/sqlite@5.9.7)
       fs-extra: 11.1.1
-      knex: 2.5.1(better-sqlite3@9.6.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
+      knex: 2.5.1(better-sqlite3@12.1.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
       sqlstring: 2.3.3
     optionalDependencies:
-      better-sqlite3: 9.6.0
+      better-sqlite3: 12.1.0
       mssql: 7.3.5(encoding@0.1.13)
       mysql: 2.18.1
       mysql2: 3.9.7
@@ -17607,10 +17608,10 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/sqlite@5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@9.6.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)':
+  '@mikro-orm/sqlite@5.9.7(@mikro-orm/core@5.9.7)(better-sqlite3@12.1.0)(encoding@0.1.13)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)':
     dependencies:
       '@mikro-orm/core': 5.9.7(@mikro-orm/sqlite@5.9.7)
-      '@mikro-orm/knex': 5.9.7(@mikro-orm/core@5.9.7(@mikro-orm/sqlite@5.9.7))(better-sqlite3@9.6.0)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
+      '@mikro-orm/knex': 5.9.7(@mikro-orm/core@5.9.7(@mikro-orm/sqlite@5.9.7))(better-sqlite3@12.1.0)(mssql@7.3.5(encoding@0.1.13))(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
       fs-extra: 11.1.1
       sqlite3: 5.1.6(encoding@0.1.13)
       sqlstring-sqlite: 0.1.1
@@ -21619,7 +21620,7 @@ snapshots:
       mathjax-full: 3.2.2
       react: 18.3.1
 
-  better-sqlite3@9.6.0:
+  better-sqlite3@12.1.0:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.1
@@ -22729,7 +22730,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.32.1(@cloudflare/workers-types@4.20240117.0)(@libsql/client@0.6.0)(@neondatabase/serverless@0.10.4)(@opentelemetry/api@1.7.0)(@prisma/client@6.0.0)(@types/better-sqlite3@7.6.9)(@types/pg@8.11.6)(@types/react@18.2.78)(@xata.io/client@0.28.0(typescript@5.3.3))(better-sqlite3@9.6.0)(knex@2.5.1(better-sqlite3@9.6.0)(mysql2@3.9.7)(pg@8.11.3)(sqlite3@5.1.6))(kysely@0.27.5)(mysql2@3.9.7)(pg@8.11.3)(postgres@3.4.3)(react@18.3.1)(sqlite3@5.1.6):
+  drizzle-orm@0.32.1(@cloudflare/workers-types@4.20240117.0)(@libsql/client@0.6.0)(@neondatabase/serverless@0.10.4)(@opentelemetry/api@1.7.0)(@prisma/client@6.0.0)(@types/better-sqlite3@7.6.9)(@types/pg@8.11.6)(@types/react@18.2.78)(@xata.io/client@0.28.0(typescript@5.3.3))(better-sqlite3@12.1.0)(knex@2.5.1(better-sqlite3@12.1.0)(mysql2@3.9.7)(pg@8.11.3)(sqlite3@5.1.6))(kysely@0.27.5)(mysql2@3.9.7)(pg@8.11.3)(postgres@3.4.3)(react@18.3.1)(sqlite3@5.1.6):
     optionalDependencies:
       '@cloudflare/workers-types': 4.20240117.0
       '@libsql/client': 0.6.0
@@ -22740,8 +22741,8 @@ snapshots:
       '@types/pg': 8.11.6
       '@types/react': 18.2.78
       '@xata.io/client': 0.28.0(typescript@5.3.3)
-      better-sqlite3: 9.6.0
-      knex: 2.5.1(better-sqlite3@9.6.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
+      better-sqlite3: 12.1.0
+      knex: 2.5.1(better-sqlite3@12.1.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13))
       kysely: 0.27.5
       mysql2: 3.9.7
       pg: 8.11.3
@@ -25062,7 +25063,7 @@ snapshots:
 
   klona@2.0.6: {}
 
-  knex@2.5.1(better-sqlite3@9.6.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13)):
+  knex@2.5.1(better-sqlite3@12.1.0)(mysql2@3.9.7)(mysql@2.18.1)(pg@8.11.3)(sqlite3@5.1.6(encoding@0.1.13)):
     dependencies:
       colorette: 2.0.19
       commander: 10.0.1
@@ -25079,7 +25080,7 @@ snapshots:
       tarn: 3.0.2
       tildify: 2.0.0
     optionalDependencies:
-      better-sqlite3: 9.6.0
+      better-sqlite3: 12.1.0
       mysql: 2.18.1
       mysql2: 3.9.7
       pg: 8.11.3
@@ -26709,7 +26710,7 @@ snapshots:
 
   node-abi@3.54.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.1
 
   node-abort-controller@2.0.0: {}
 
@@ -28425,8 +28426,7 @@ snapshots:
 
   semver@7.6.3: {}
 
-  semver@7.7.1:
-    optional: true
+  semver@7.7.1: {}
 
   send@0.18.0:
     dependencies:
